@@ -1,6 +1,6 @@
 export class TaskDto {
     readonly name: string;
     readonly description: string;
-    readonly createdAt: string;
-    readonly updatedAt: string;
+    readonly createdAt: Date;
+    readonly updatedAt: Date;
 }

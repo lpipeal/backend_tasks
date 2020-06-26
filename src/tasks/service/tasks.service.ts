@@ -26,8 +26,8 @@ export class TaskService {
             
              newTask.name= task.name;
              newTask.description= task.description;
-             newTask.createdAt= task.createdAt;
-             newTask.updatedAt= task.updatedAt;
+             newTask.createdAt= new Date();
+             newTask.updatedAt= new Date();
              
             return  this.taskRepository.save(newTask);
         }
@@ -37,7 +37,7 @@ export class TaskService {
             updateTask.name = task.name;
             updateTask.description = task.description;
             updateTask.createdAt = task.createdAt;
-            updateTask.updatedAt = task.updatedAt;
+            updateTask.updatedAt = new Date();
             return this.taskRepository.save(updateTask);
         }
 

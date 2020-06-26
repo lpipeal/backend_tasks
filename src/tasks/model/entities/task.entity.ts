@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, Timestamp } from "typeorm";
+import { Transform } from "stream";
+import { timeStamp } from "console";
 
 @Entity('tasks')
 export class Task {
@@ -13,9 +15,9 @@ export class Task {
     description: string;
     
     @Column()
-    createdAt: string;
+    createdAt: Date;
     
     @Column()
-    updatedAt: string;
+    updatedAt: Date;
     
 }
